@@ -1,0 +1,17 @@
+{
+  "name": "NoSQL-Project",
+  "version": "0.0.1",
+  "description": "NoSQL.",
+  "main": "server.js",
+  "author": "Scoco",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cheerio": "latest",
+    "express": "latest",
+    "mongodb": "^2.2.25",
+    "request": "latest"
+  },
+  "scripts": {
+    "dev": "nodemon server.js"
+  }
+}
