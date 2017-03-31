@@ -6,6 +6,7 @@ var db
 
 app.use('/public', express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}))
+app.set('view engine', 'ejs')
 
 
 MongoClient.connect('mongodb://regular:regularesilv1@ds145750.mlab.com:45750/nosql_project', (err, database) => {
@@ -30,8 +31,10 @@ app.post('/quotes', (req, res) => {
 })
 
 app.get('/getquotes', (req, res) => {
-  var cursor = db.collection('quotes').find().toArray(function(err, results) {
-  console.log(results)
-  // send HTML file populated with quotes here
+  db.collection('quotes').find().toArray((err, result) => {
+    if (err) return console.log(err)
+    // renders index.ejs
+    res.render('index.ejs', {quotes: result})
+  })
 })
 
