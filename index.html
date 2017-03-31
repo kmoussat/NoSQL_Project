@@ -34,6 +34,7 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <a class="navbar-brand" href="/">NoSQL Project</a>
+                <a class="navbar-brand" href="/doc">Documentation</a>
             </div>
             
             <!-- /.navbar-collapse -->
@@ -44,46 +45,78 @@
     <!-- Page Content -->
     <div class="container">
         <div class="row-fluid">
+            
+            <div class="col-lg-12">
+                <!-- ajouter quote avec Mongodb -->
+                
+                <div class="alert alert-info">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Comment ça marche ?</strong> Notre application fonctionne sous node.js et est reliée à une base de données Mongodb. Essayer les différentes commandes disponibles ci-dessous.
+                </div>
 
-            <div class="span9 hero-unit" id="rqt1">
-				<!-- ajouter quote avec Mongodb -->
+
                 <form action="/quotes" method="POST">
-  					<fieldset>
-					    <legend>Ajouter une "quote" : </legend>
-    					<label>Name :</label>
-    					<input type="text" placeholder="Remplir" name="name">
-    					<label>Quote :</label>
-    					<input type="text" placeholder="Remplir" name="quote">
-    					<button type="submit" class="btn btn-primary">Submit</button>
-  					</fieldset>
-				</form>
-				
-				<br>
-				<!-- Montrer les quotes existantes avec Mongodb -->
-				<form action="/getquotes" method="GET">
-  					<fieldset>
-  						<legend>Afficher les "quotes" : </legend>
-    					<button type="submit" class="btn btn-primary">Submit</button>
-  					</fieldset>
-				</form>
-				
-				<br>
-				<!-- Chercher une quote existante avec Mongodb -->
-				<form action="/getquotes" method="GET">
-  					<fieldset>
-  						<legend>Chercher une "quote" : </legend>
-  						<label>Name :</label>
-    					<input type="text" placeholder="Remplir" name="name">
-    					<label>Quote :</label>
-    					<input type="text" placeholder="Remplir" name="quote">
-    					<button type="submit" class="btn btn-primary">Submit</button>
-  					</fieldset>
-				</form>
+                    <fieldset>
+                        <legend><strong>Ajouter une "quote" : </strong></legend>
+                        <label>Name :</label>
+                        <input type="text" placeholder="Remplir" name="name" required>
+                        <label>Quote :</label>
+                        <input type="text" placeholder="Remplir" name="quote" required>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </fieldset>
+                </form>
+                
+                <br>
+                <!-- Montrer les quotes existantes avec Mongodb -->
+                <form action="/getquotes" method="GET">
+                    <fieldset>
+                        <legend><strong>Afficher les "quotes" : </strong></legend>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </fieldset>
+                </form>
+                
+                <br>
+                <!-- Chercher une quote existante avec Mongodb -->
+                <form action="/getquotesSname" method="POST">
+                    <fieldset>
+                        <legend><strong>Chercher une "quote" : </strong></legend>
+                        <label>Name :</label>
+                        <input type="text" placeholder="Remplir" name="name" required>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </fieldset>
+                </form>
+                <br>
+                <form action="/getquotesScontent" method="POST">
+                    <fieldset>
+                        <label><strong>Quote :</strong></label>
+                        <input type="text" placeholder="Remplir" name="quote" required>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </fieldset>
+                </form>
+                
+                <br>
+                <!-- Entrer un reqête avec Mongodb -->
+                <!-- définir le require et un exemple par défaut -->
+                <form action="/setrqt" method="POST">
+                    <fieldset>
+                        <legend><strong>Requête personnalisée : </strong></legend>
+                        <textarea class="form-control" rows="3" name="rqt"></textarea>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </fieldset>
+                </form>
+
+                <br>
+                <!-- Base de données perso -->
+                <form action="/addCollection" method="POST">
+                    <fieldset>
+                        <legend><strong>Ouvrez une base de données privée : </strong></legend>
+                        <textarea class="form-control" rows="3" name="rqt"></textarea>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </fieldset>
+                </form>
+
 
             </div>
-
-
-
         </div>
     </div>
     <!-- /.container -->

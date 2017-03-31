@@ -34,6 +34,7 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <a class="navbar-brand" href="/">NoSQL Project</a>
+                <a class="navbar-brand" href="/doc">Documentation</a>
             </div>
             
             <!-- /.navbar-collapse -->
@@ -44,53 +45,23 @@
     <!-- Page Content -->
     <div class="container">
         <div class="row-fluid">
-
-            <div class="span9 hero-unit" id="rqt1">
-				<!-- ajouter quote avec Mongodb -->
-                <form action="/quotes" method="POST">
-  					<fieldset>
-					    <legend>Ajouter une "quote" : </legend>
-    					<label>Name :</label>
-    					<input type="text" placeholder="Remplir" name="name">
-    					<label>Quote :</label>
-    					<input type="text" placeholder="Remplir" name="quote">
-    					<button type="submit" class="btn btn-primary">Submit</button>
-  					</fieldset>
-				</form>
-				
-				<br>
-				<!-- Montrer les quotes existantes avec Mongodb -->
-				<form action="/getquotes" method="GET">
-  					<fieldset>
-  						<legend>Afficher les "quotes" : </legend>
-    					<button type="submit" class="btn btn-primary">Submit</button>
-  					</fieldset>
-				</form>
-
-				<ul class="quotes">
-  					<% for(var i=0; i<quotes.length; i++) {%>
-    					<li class="quote">
-      						<span><%= quotes[i].name %></span>
-      						<span> - </span>
-      						<span><%= quotes[i].quote %></span>
-    					</li>
-  					<% } %>
-  				</ul>
-				
-				<br>
-				<!-- Chercher une quote existante avec Mongodb -->
-				<form action="/getquotes" method="GET">
-  					<fieldset>
-  						<legend>Chercher une "quote" : </legend>
-  						<label>Name :</label>
-    					<input type="text" placeholder="Remplir" name="name">
-    					<label>Quote :</label>
-    					<input type="text" placeholder="Remplir" name="quote">
-    					<button type="submit" class="btn btn-primary">Submit</button>
-  					</fieldset>
-				</form>
+            
+            <div class="col-lg-6">
+                <h3>Résultats ci dessous :</h3>
+                <!-- masquer affichage de la div -->
+                <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <!-- RESULTATS ICI -->
+                    <h5>Informations enregistrées</h5>
+                </div>
+                
+                <form action="/" method="GET">
+                    <button type="submit" class="btn btn-primary">Retour</button>
+                </form>
+                
 
             </div>
+
 
 
 
