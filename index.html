@@ -45,31 +45,41 @@
     <div class="container">
         <div class="row-fluid">
 
-
-
-            <div class="span3">
-            	<p class="lead">Requêtes Mongodb</p>
-            	<ul class="nav nav-tabs">
-  					<li href="rqt1" class="list-group-item active">Requête type 1</li>
-                    <li href="rqt2" class="list-group-item">Requête type 2</li>
-                    <li href="rqt3" class="list-group-item">Requête type 3</li>
-				</ul>
-            </div>
-
-			<br>
-
-            <div class="span9 hero-unit">
-
+            <div class="span9 hero-unit" id="rqt1">
+				<!-- ajouter quote avec Mongodb -->
                 <form action="/quotes" method="POST">
   					<fieldset>
-					    <legend>Entrez des données</legend>
+					    <legend>Ajouter une "quote" : </legend>
     					<label>Name :</label>
-    					<input type="text" placeholder="Remplir">
+    					<input type="text" placeholder="Remplir" name="name">
     					<label>Quote :</label>
-    					<input type="text" placeholder="Remplir">
-    					<button type="submit" class="btn">Submit</button>
+    					<input type="text" placeholder="Remplir" name="quote">
+    					<button type="submit" class="btn btn-primary">Submit</button>
   					</fieldset>
 				</form>
+				
+				<br>
+				<!-- Montrer les quotes existantes avec Mongodb -->
+				<form action="/getquotes" method="GET">
+  					<fieldset>
+  						<legend>Afficher les "quotes" : </legend>
+    					<button type="submit" class="btn btn-primary">Submit</button>
+  					</fieldset>
+				</form>
+				
+				<br>
+				<!-- Chercher une quote existante avec Mongodb -->
+				<form action="/getquotes" method="GET">
+  					<fieldset>
+  						<legend>Chercher une "quote" : </legend>
+  						<label>Name :</label>
+    					<input type="text" placeholder="Remplir" name="name">
+    					<label>Quote :</label>
+    					<input type="text" placeholder="Remplir" name="quote">
+    					<button type="submit" class="btn btn-primary">Submit</button>
+  					</fieldset>
+				</form>
+
             </div>
 
 
