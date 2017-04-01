@@ -26,6 +26,11 @@
 	5. In your browser : `localhost:3000`
 	6. Play with buttons.
 
+	In case of error, make sure you have install the following modules :
+	- Express
+	- Body-parser
+	- Mongodb
+
 ## Licence
 
 	[Uncopyrighted](http://zenhabits.net/uncopyright/)
