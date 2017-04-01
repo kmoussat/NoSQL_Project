@@ -1,78 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
 
-        <title>NoSQL Project</title>
+<head>
 
-        <!-- Bootstrap Core CSS -->
-        <link href="public/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-        <!-- Custom CSS -->
-        <link href="public/css/shop-item.css" rel="stylesheet">
+    <title>NoSQL Project</title>
 
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-        <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/">NoSQL Project</a>
-                    <a class="navbar-brand" href="/doc">Documentation</a>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container -->
-        </nav>
+    <!-- Bootstrap Core CSS -->
+    <link href="public/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Page Content -->
+    <!-- Custom CSS -->
+    <link href="public/css/shop-item.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
-            <div class="row-fluid">
-                <!-- documentation du projet -->
-                <div class="col-lg-6">
-                    <p class="lead">Technical choices</p>
-                    <p> We have decide to create a website in Html5, Css3 and JavaScript.</br>
-                        This website is connect with Node.js to a dataBase MongoDB.</p>
-                </div>
-                <div class="col-lg-6">
-                    <p class="lead">Code structure</p> 
-                    <p> {</br>
-                            &nbsp;&nbsp;&nbsp;id: 1234,</br>
-                            &nbsp;&nbsp;&nbsp;name: "Microsoft",</br>
-                            &nbsp;&nbsp;&nbsp;quote : "Any questions? We have paperclips dancing."</br>
-                        }</p>    
-                </div>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">NoSQL Project</a>
+                <a class="navbar-brand" href="/doc">Documentation</a>
             </div>
+            
+            <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
-        <div class="container">
-            <hr>
-            <!-- Footer -->
-            <footer>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p>Project realise by : Auriande DE COLIGNY && Ken MOUSSAT && Paul PUECH && Clément RENDU</p>
-                    </div>
-                </div>
-            </footer>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row-fluid">
+            <!-- documentation du projet -->
+
+            <div class="col-lg-6">
+                <p class="lead">Choix techniques</p>
+                <p> <h4>  Node.Js </h4> 
+                <br> Dans le cadre de ce projet en NoSQL database, nous avons choisi la plateforme logicielle Node.Js pour réaliser notre application en réseau. Elle utilise la machine virtuelle V8 et permet de monter en local un serveur.
+
+                </p>
+
+                <p> <h4> Javascript, HTML & Css</h4>
+                Le Javascript nous permet d'utiliser la programmation orientée objet pour créer des interactions entre l'utilisateur d'une page de l'application et cette dernière. 
+                Pour coder les pages de l'application, nous avons utiliser HTML et CSS complété d'un framework " BootStrap" pour accéder rrapidemment à un design agréable. 
+                 </p>    
+
+                 <p> <h4> Les requêtes </h4>
+                  Notre application permet d'intéragir sur une base de données contenant des citations, les quotes. 
+                  L'utilisateur peut en ajouter, les consulter, ou bien les supprimer. 
+                  </p>
+
+                  <p> <h4>NoSQL </h4>
+                  NoSQL nous permet 
+                  </p>
+            </div>
+            <div class="col-lg-6">
+                <p class="lead">Structure du code</p> 
+                <p> L'application se structre grâce à une page d'acceuil avec  toutes les fonctionnalités dessus afin de proposer une "One Page" application. Nous utilisons une seconde page seulement pour expliquer nos choix ainsi que la démarche utilisée pour structurer notre code. </br>
+
+                Nous avons trois pages qui nous permettent de gérer l'ajout, l'affichage ainsi que la suppression des quotes. 
+                Nous avons structuré notre code afin de répondre aux attentes de l'énoncé dans le même orde.  </br>
+
+                Notre base de données Cities est défini grâce au JSON. Celui-ci nous permet de transferer la base de données par réseau ou entre deux machines sans perte d'information et sans problème de codage/ décodage. Ainsi utiliser NoSQL 
+                nous permet de traiter à grande échelle l'ensemble des données de la base Cities. 
+                </p>
+
+                    
+            </div>
+
         </div>
-        <!-- /.container -->
+    </div>
+    <!-- /.container -->
 
-        <!-- jQuery -->
-        <script src="public/js/jquery.js"></script>
+    <div class="container">
 
-        <!-- Bootstrap Core JavaScript -->
-        <script src="public/js/bootstrap.min.js"></script>
-    </body>
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Projet réalisé par : Ken Moussat / Paul Puech / Clément Rendu / Auriane Rouault de Coligny</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="public/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="public/js/bootstrap.min.js"></script>
+
+</body>
+
 </html>
