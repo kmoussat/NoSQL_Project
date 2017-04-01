@@ -71,7 +71,7 @@
                 <form action="/getquotes" method="GET">
                     <fieldset>
                         <legend><strong>Afficher les "quotes" : </strong></legend>
-                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                        <button type="submit" class="btn btn-success">Tout afficher</button>
                     </fieldset>
                 </form>
                 
@@ -100,18 +100,34 @@
                 <form action="/setrqt" method="POST">
                     <fieldset>
                         <legend><strong>Requête personnalisée : </strong></legend>
-                        <textarea class="form-control" rows="3" name="rqt"></textarea>
+                        <textarea class="form-control" rows="2" name="rqt" placeholder="requête de type : {name: 'monnom',quote:'maQuote'}" required></textarea>
                         <button type="submit" class="btn btn-primary">Envoyer</button>
                     </fieldset>
                 </form>
 
                 <br>
-                <!-- Base de données perso -->
-                <form action="/addCollection" method="POST">
+                <!-- Supprimer une quote avec ID -->
+                <form action="/majQuote" method="POST">
                     <fieldset>
-                        <legend><strong>Ouvrez une base de données privée : </strong></legend>
-                        <textarea class="form-control" rows="3" name="rqt"></textarea>
-                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                        <legend><strong>Modifiez un quote avec son id :</strong></legend>
+                        <label>ID :</label>
+                        <input type="text" name="id" required placeholder="type : 53dfe7bbfd06f94c156ee96e">
+                        <!-- <label>Name :</label>
+                        <input type="text" placeholder="Remplir" name="name" required> -->
+                        <label>Quote :</label>
+                        <input type="text" placeholder="Citation" name="quote" required>
+                        <button type="submit" class="btn btn-warning">Mettre à jour</button>
+                    </fieldset>
+                </form>
+
+                <br>
+                <!-- Supprimer une quote avec ID -->
+                <form action="/delQuote" method="POST">
+                    <fieldset>
+                        <legend><strong>Supprimez une quote avec son id : </strong></legend>
+                        <label>ID :</label>
+                        <input type="text" name="id" required placeholder="type : 53dfe7bbfd06f94c156ee96e" required>
+                        <button type="submit" class="btn btn-danger">Supprimer</button>
                     </fieldset>
                 </form>
 

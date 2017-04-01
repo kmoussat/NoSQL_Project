@@ -45,24 +45,14 @@
     <!-- Page Content -->
     <div class="container">
         <div class="row-fluid">
-            
+                       
             <div class="col-lg-6">
                 <h3>Résultats ci dessous :</h3>
                 <!-- masquer affichage de la div -->
-                <div class="alert alert-success">
+                <div class="alert alert-danger">
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
                     <!-- RESULTATS ICI -->
-                    <ul class="quotes">
-                    <% for(var i=0; i<quotes.length; i++) {%>
-                        <li class="quote">
-                            <span><%= quotes[i]._id %></span>
-                            <span> - </span>
-                            <span><%= quotes[i].name %></span>
-                            <span> - </span>
-                            <span><%= quotes[i].quote %></span>
-                        </li>
-                    <% } %>
-                    </ul>
+                    <h5>Erreur ...</h5>
                 </div>
 
                 <form action="/" method="GET">
